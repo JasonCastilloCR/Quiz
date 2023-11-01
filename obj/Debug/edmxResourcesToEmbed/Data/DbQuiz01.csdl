@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PV_Quiz01Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="PV_Quiz01Entities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="spConsultarTodasLasPeliculas" ReturnType="Collection(PV_Quiz01Model.spConsultarTodasLasPeliculas_Result)" />
+    <FunctionImport Name="spCrearPelicula">
+      <Parameter Name="nombre" Mode="In" Type="String" />
+      <Parameter Name="anhoEstreno" Mode="In" Type="Int32" />
+      <Parameter Name="genero" Mode="In" Type="String" />
+      <Parameter Name="fechaCreacion" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spConsultarTodasLasPeliculas_Result">
+    <Property Type="Int32" Name="idPelicula" Nullable="false" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="150" />
+    <Property Type="Int32" Name="anhoEstreno" Nullable="false" />
+    <Property Type="String" Name="genero" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="fechaCreacion" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="fechaModificacion" Nullable="true" Precision="23" />
+  </ComplexType>
+</Schema>

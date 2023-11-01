@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PV_Quiz01ModelStoreContainer" CdmEntityContainer="PV_Quiz01Entities">
+    <FunctionImportMapping FunctionImportName="spConsultarTodasLasPeliculas" FunctionName="PV_Quiz01Model.Store.spConsultarTodasLasPeliculas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PV_Quiz01Model.spConsultarTodasLasPeliculas_Result">
+          <ScalarProperty Name="idPelicula" ColumnName="idPelicula" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="anhoEstreno" ColumnName="anhoEstreno" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
+          <ScalarProperty Name="fechaModificacion" ColumnName="fechaModificacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spCrearPelicula" FunctionName="PV_Quiz01Model.Store.spCrearPelicula" />
+  </EntityContainerMapping>
+</Mapping>
